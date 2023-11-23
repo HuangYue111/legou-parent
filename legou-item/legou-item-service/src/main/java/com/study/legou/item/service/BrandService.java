@@ -14,4 +14,6 @@ public interface BrandService extends ICrudService<Brand> {
      * @return
      */
     List<Category> selectCategoryByBrand(Long id);
+
+    List<Brand> selectBrandByIds(List<Long> ids);
 }

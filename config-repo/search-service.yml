@@ -1,0 +1,28 @@
+server:
+  port: 9006
+
+logging:
+  #file: demo.log
+  pattern:
+    console: "%d - %msg%n"
+  level:
+    org.springframework.web: debug
+    top.psjj: debug
+
+security:
+  oauth2:
+    resource:
+      jwt:
+        key-uri: http://localhost:9098/oauth/token_key #如果使用JWT，可以获取公钥用于 token 的验签
+
+spring:
+  data:
+    elasticsearch:
+      cluster-name: elasticsearch
+      cluster-nodes: 192.168.29.152:9300
+  elasticsearch:
+    rest:
+      uris: 192.168.29.152:9200
+
+  jackson:
+    default-property-inclusion: non_null # 配置json处理时忽略空值

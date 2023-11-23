@@ -1,5 +1,7 @@
 package com.study.legou.item.service.impl;
 
+import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
+import com.baomidou.mybatisplus.core.toolkit.Wrappers;
 import com.legou.core.service.impl.CrudServiceImpl;
 import com.study.legou.item.dao.BrandDao;
 import com.study.legou.item.po.Brand;
@@ -34,5 +36,11 @@ public class BrandServiceImpl extends CrudServiceImpl<Brand> implements BrandSer
     @Override
     public List<Category> selectCategoryByBrand(Long id) {
         return ((BrandDao) getBaseMapper()).selectCategoryByBrand(id);
+    }
+
+    @Override
+    public List<Brand> selectBrandByIds(List<Long> ids) {
+        QueryWrapper<Brand> queryWrapper = Wrappers.<Brand>query().in("id_", ids);
+        return getBaseMapper().selectList(queryWrapper);
     }
 }

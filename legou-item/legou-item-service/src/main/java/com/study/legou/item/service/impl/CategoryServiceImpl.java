@@ -10,6 +10,7 @@ import org.springframework.stereotype.Service;
 
 
 import java.util.List;
+import java.util.stream.Collectors;
 
 @Service
 public class CategoryServiceImpl extends CrudServiceImpl<Category> implements CategoryService {
@@ -27,5 +28,10 @@ public class CategoryServiceImpl extends CrudServiceImpl<Category> implements Ca
         }
 
         return getBaseMapper().selectList(queryWrapper);
+    }
+    @Override
+    public List<String> selectNamesByIds(List<Long> ids) {
+        QueryWrapper<Category> queryWrapper = Wrappers.<Category>query().in("id_", ids);
+        return getBaseMapper().selectList(queryWrapper).stream().map(item -> item.getTitle()).collect(Collectors.toList());
     }
 }

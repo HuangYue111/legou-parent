@@ -37,4 +37,5 @@ public class SpuController extends BaseController<SpuService, Spu> {
         return service.list(new Spu());
     }
 
+
 }

@@ -2,28 +2,45 @@
 <project version="4">
   <component name="CompilerConfiguration">
     <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
       <profile name="Maven default annotation processors profile" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="legou-core" />
-        <module name="legou-upload" />
+        <module name="legou-search" />
         <module name="registry" />
         <module name="legou-common" />
-        <module name="legou-item-instance" />
-        <module name="config" />
+        <module name="legou-canal" />
+        <module name="legou-search-instance" />
         <module name="legou-item-service" />
+        <module name="legou-upload" />
+        <module name="legou-search-service" />
+        <module name="legou-item-instance" />
+        <module name="legou-page" />
+        <module name="config" />
+        <module name="gateway" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="legou-search-interface" target="1.8" />
+    </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="config" options="-parameters" />
+      <module name="gateway" options="-parameters" />
+      <module name="legou-canal" options="-parameters" />
       <module name="legou-common" options="-parameters" />
       <module name="legou-core" options="-parameters" />
       <module name="legou-item" options="" />
       <module name="legou-item-instance" options="-parameters" />
       <module name="legou-item-service" options="-parameters" />
+      <module name="legou-page" options="-parameters" />
+      <module name="legou-search" options="-parameters" />
+      <module name="legou-search-instance" options="-parameters" />
+      <module name="legou-search-interface" options="-parameters" />
+      <module name="legou-search-service" options="-parameters" />
       <module name="legou-upload" options="-parameters" />
       <module name="registry" options="-parameters" />
     </option>

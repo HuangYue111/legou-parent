@@ -1,0 +1,23 @@
+server:
+  port: 9007
+
+logging:
+  #file: demo.log
+  pattern:
+    console: "%d - %msg%n"
+  level:
+    org.springframework.web: debug
+    top.psjj: debug
+
+spring:
+  redis:
+    host: 192.168.29.152
+    port: 6379
+#canal配置
+canal:
+  client:
+    instances:
+      # exmaple
+      example:
+        host: 192.168.29.152
+        port: 11111

@@ -1,0 +1,5 @@
+spring:
+  application:
+    name: page-service
+# 生成静态页的位置
+pagepath: D:\4stage\4stage_code\legou-parent\legou-page\src\main\resources\static\items

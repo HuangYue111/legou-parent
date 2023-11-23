@@ -17,4 +17,6 @@ public class SpecParamController extends BaseController<SpecParamService, SpecPa
     public List<SpecParam> selectSpecParamApi(@RequestBody SpecParam entity) {
         return service.list(entity);
     }
+
+
 }

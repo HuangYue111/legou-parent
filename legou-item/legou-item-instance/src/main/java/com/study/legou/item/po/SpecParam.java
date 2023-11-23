@@ -23,7 +23,7 @@ public class SpecParam extends BaseEntity {
     @TableField("searching_")
     private Boolean searching;
     @TableField("segments_")
-    private Integer segments;
+    private String segments;
 
 
 }
